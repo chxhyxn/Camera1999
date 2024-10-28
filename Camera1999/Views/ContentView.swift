@@ -201,7 +201,10 @@ struct ContentView: View {
                                     }
                                 }, label: {
                                     Text(filterManager.presetLabels[index])
-                                        .tint(filterManager.currentPresetIndex == index ? .yellow : .white)
+                                        .foregroundColor(filterManager.currentPresetIndex == index ? .yellow : .white)
+                                        .padding(.horizontal, 5)
+                                        .padding(.vertical, 1)
+                                        .background(.black)
                                         .font(.vcr24)
                                 })
                             }
