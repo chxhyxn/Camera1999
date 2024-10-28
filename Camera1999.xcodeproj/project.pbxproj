@@ -418,10 +418,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Camera1999/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Camera;
+				INFOPLIST_KEY_CFBundleDisplayName = 1999;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
-				INFOPLIST_KEY_NSCameraUsageDescription = "CameraSC requires access to the camera to take photos.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "CameraSC requires access to photo library to save and edit photos.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "1999 requires access to the camera to take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "1999 requires access to photo library to save and edit photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,10 +460,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Camera1999/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Camera;
+				INFOPLIST_KEY_CFBundleDisplayName = 1999;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
-				INFOPLIST_KEY_NSCameraUsageDescription = "CameraSC requires access to the camera to take photos.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "CameraSC requires access to photo library to save and edit photos.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "1999 requires access to the camera to take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "1999 requires access to photo library to save and edit photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

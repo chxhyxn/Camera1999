@@ -117,7 +117,7 @@ class FilterManager: ObservableObject {
     
     func applyPreset() {
         let preset = presets[currentPresetIndex]
-        #imageLiteral(resourceName: "Scratch1 2.png")
+//        #imageLiteral(resourceName: "Scratch1 2.png")
         // 현재 프리셋 값으로 필터 매니저의 설정 업데이트
         currentFilmIndex = preset.filmIndex
         currentColorIndex = preset.colorIndex

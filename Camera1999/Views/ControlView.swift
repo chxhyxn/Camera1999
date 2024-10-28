@@ -33,8 +33,11 @@ struct ControlView: View {
                                 }
                             }, label: {
                                 Text(filterManager.filmLabels[index])
+                                    .foregroundColor(filterManager.currentFilmIndex == index ? .yellow : .white)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 10)
+                                    .background(.black)
                             })
-                            .tint(filterManager.currentFilmIndex == index ? .yellow : .white)
                         }
                     }
                 }
@@ -52,8 +55,11 @@ struct ControlView: View {
                                 }
                             }, label: {
                                 Text(filterManager.colorLabels[index])
+                                    .foregroundColor(filterManager.currentColorIndex == index ? .yellow : .white)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 10)
+                                    .background(.black)
                             })
-                            .tint(filterManager.currentColorIndex == index ? .yellow : .white)
                         }
                     }
                 }
@@ -71,8 +77,11 @@ struct ControlView: View {
                                 }
                             }, label: {
                                 Text(filterManager.ratioLabels[index])
+                                    .foregroundColor(filterManager.currentFilmIndex == index ? .yellow : .white)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 10)
+                                    .background(filterManager.currentRatioIndex == index ? Color.black.opacity(0.7) : Color.black.opacity(0.5))
                             })
-                            .tint(filterManager.currentRatioIndex == index ? .yellow : .white)
                         }
                     }
                 }

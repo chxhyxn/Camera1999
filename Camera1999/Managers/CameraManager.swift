@@ -120,7 +120,16 @@ class CameraManager: ObservableObject {
         }
         session.beginConfiguration()
         
-        // 함수가 종료될 때 실행
+        // 세션 프리셋을 HD1280x720으로 설정
+        if session.canSetSessionPreset(.hd1280x720) {
+            session.sessionPreset = .hd1280x720
+        } else {
+            status = .failed
+            session.commitConfiguration()
+            return
+        }
+        
+        // 함수가 종료될 때 세션 구성을 커밋
         defer {
             session.commitConfiguration()
         }
@@ -133,7 +142,7 @@ class CameraManager: ObservableObject {
             return
         }
         
-        // session에 Input 추가
+        // 세션에 Input 추가
         do {
             let cameraInput = try AVCaptureDeviceInput(device: camera)
             if session.canAddInput(cameraInput) {
@@ -149,7 +158,7 @@ class CameraManager: ObservableObject {
             return
         }
         
-        // session에 Output 추가
+        // 세션에 Output 추가
         if session.canAddOutput(videoOutput) {
             session.addOutput(videoOutput)
             
