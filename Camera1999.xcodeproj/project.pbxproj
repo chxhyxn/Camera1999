@@ -21,7 +21,6 @@
 		B99169E52BC363D00032DDC9 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99169E42BC363D00032DDC9 /* Preset.swift */; };
 		B99169EB2BC372720032DDC9 /* shutter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B99169EA2BC372720032DDC9 /* shutter.mp3 */; };
 		B99169ED2BC374B30032DDC9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99169EC2BC374B30032DDC9 /* Launch Screen.storyboard */; };
-		B99169F02BC375140032DDC9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B99169EF2BC375140032DDC9 /* PrivacyInfo.xcprivacy */; };
 		B9BF61202BBFF1720079F2F2 /* Camera1999App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BF611F2BBFF1720079F2F2 /* Camera1999App.swift */; };
 		B9BF61222BBFF1720079F2F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BF61212BBFF1720079F2F2 /* ContentView.swift */; };
 		B9BF61242BBFF1740079F2F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BF61232BBFF1740079F2F2 /* Assets.xcassets */; };
@@ -52,7 +51,6 @@
 		B99169E42BC363D00032DDC9 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
 		B99169EA2BC372720032DDC9 /* shutter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shutter.mp3; sourceTree = "<group>"; };
 		B99169EC2BC374B30032DDC9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		B99169EF2BC375140032DDC9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		B9BF611C2BBFF1720079F2F2 /* Camera1999.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera1999.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BF611F2BBFF1720079F2F2 /* Camera1999App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera1999App.swift; sourceTree = "<group>"; };
 		B9BF61212BBFF1720079F2F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				B92C5D2E2BC0D42600EACE60 /* Font */,
 				B9BF61232BBFF1740079F2F2 /* Assets.xcassets */,
 				B99169EA2BC372720032DDC9 /* shutter.mp3 */,
-				B99169EF2BC375140032DDC9 /* PrivacyInfo.xcprivacy */,
 				B9BF61252BBFF1740079F2F2 /* Preview Content */,
 			);
 			path = Camera1999;
@@ -244,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99169F02BC375140032DDC9 /* PrivacyInfo.xcprivacy in Resources */,
 				B92C5D322BC0D4CB00EACE60 /* VCR_OSD_MONO_1.001.ttf in Resources */,
 				B9BF61272BBFF1740079F2F2 /* Preview Assets.xcassets in Resources */,
 				B9BF61242BBFF1740079F2F2 /* Assets.xcassets in Resources */,
