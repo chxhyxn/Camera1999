@@ -121,8 +121,8 @@ class CameraManager: ObservableObject {
         session.beginConfiguration()
         
         // 세션 프리셋을 HD1280x720으로 설정
-        if session.canSetSessionPreset(.hd1280x720) {
-            session.sessionPreset = .hd1280x720
+        if session.canSetSessionPreset(.iFrame1280x720) {
+            session.sessionPreset = .iFrame1280x720
         } else {
             status = .failed
             session.commitConfiguration()
