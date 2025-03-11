@@ -23,8 +23,8 @@ class FilterManager: ObservableObject {
         
     @Published var selectedAspectRatioIndex: Int = 0
     
-    let filmLabels: [String] = ["None", "ScratchA", "ScratchB", "CRTV", "CRTH",  "NoiseA", "NoiseB", "Grain", "BokehA", "BokehB"]
-    @Published var currentFilmIndex: Int = 0
+    let filmLabels: [String] = ["None", "Default", "ScratchA", "ScratchB", "CRTV", "CRTH",  "NoiseA", "NoiseB", "Grain", "BokehA", "BokehB"]
+    @Published var currentFilmIndex: Int = 1
     
     let colorLabels: [String] = ["None", "Sakura", "Red", "Sepia", "Forest", "Ocean", "Mono", "Noir"]
     @Published var currentColorIndex: Int = 0
@@ -37,7 +37,7 @@ class FilterManager: ObservableObject {
     let presetLabels: [String] = ["0", "1", "2", "3", "4" ,"5", "6", "7", "8", "9"]
     
     var presets: [Preset] = [
-        Preset(filmIndex: 0, colorIndex: 0, exposureKeyValue: 0.0, sharpnessKeyValue: 0.0, contrastKeyValue: 1.0, saturationKeyValue: 1.0, temperatureKeyValue: 6500.0),
+        Preset(filmIndex: 1, colorIndex: 0, exposureKeyValue: 0.0, sharpnessKeyValue: 0.0, contrastKeyValue: 1.0, saturationKeyValue: 1.0, temperatureKeyValue: 6500.0),
         Preset(filmIndex: 1, colorIndex: 0, exposureKeyValue: 0.0, sharpnessKeyValue: 0.0, contrastKeyValue: 1.0, saturationKeyValue: 1.0, temperatureKeyValue: 6500.0),
         Preset(filmIndex: 2, colorIndex: 0, exposureKeyValue: 0.0, sharpnessKeyValue: 0.0, contrastKeyValue: 1.0, saturationKeyValue: 1.0, temperatureKeyValue: 6500.0),
         Preset(filmIndex: 3, colorIndex: 0, exposureKeyValue: 0.0, sharpnessKeyValue: 0.0, contrastKeyValue: 1.0, saturationKeyValue: 1.0, temperatureKeyValue: 6500.0),
