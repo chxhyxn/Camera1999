@@ -165,8 +165,11 @@ class CameraManager: ObservableObject {
             videoOutput.videoSettings =
             [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
             
-            let videoConnection = videoOutput.connection(with: .video)
-            videoConnection?.videoOrientation = .portrait
+            if let connection = videoOutput.connection(with: .video),
+               connection.isVideoStabilizationSupported {
+                connection.videoOrientation = .portrait
+                connection.preferredVideoStabilizationMode = .standard
+            }
             
         } else {
             set(error: .cannotAddOutput)
