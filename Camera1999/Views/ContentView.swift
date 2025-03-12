@@ -10,7 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var model = ContentViewModel()
     
+    @Environment(\.scenePhase) private var scenePhase
+    
     @ObservedObject private var filterManager = FilterManager.shared
+    @ObservedObject private var callDetectionManager = CallDetectionManager.shared
     private let cameraManager = CameraManager.shared
     
     
@@ -148,30 +151,41 @@ struct ContentView: View {
                 ImageView(image: filterManager.processImage(image: selectedImage))
                     .padding()
             } else if model.showFrameView && !model.isImagePickerPresented {
-                FrameView(image: model.frame, showGrid: model.showGrid)
-                    .blur(radius: model.isBlurred ? 20 : 0)
-                    .rotation3DEffect(.degrees(model.flipEffect ? 0 : 180), axis: (x: 0, y: 1, z: 0))
-                    .padding()
-                // 확대/축소제스처로 줌인/아웃
-                    .gesture(
-                        MagnificationGesture()
-                            .onChanged { value in
-                                let delta = value / self.model.lastScaleValue // 이전 스케일 대비 변화량 계산
-                                CameraManager.shared.setZoomLevel(to: delta)
-                                self.model.lastScaleValue = value // 마지막 스케일 값을 업데이트
-                            }
-                            .onEnded { _ in
-                                self.model.lastScaleValue = 1.0 // 제스처가 끝나면 마지막 스케일 값을 리셋
-                            }
-                    )
-                    .onTapGesture(count: 2) {
-                        model.takePicture()
-                    }
-                    .onAppear {
-                        DispatchQueue.global(qos: .userInitiated).async {
-                            cameraManager.session.startRunning()
+                if !callDetectionManager.isUserOnCall {
+                    FrameView(image: model.frame, showGrid: model.showGrid)
+                        .blur(radius: model.isBlurred ? 20 : 0)
+                        .rotation3DEffect(.degrees(model.flipEffect ? 0 : 180), axis: (x: 0, y: 1, z: 0))
+                        .padding()
+                    // 확대/축소제스처로 줌인/아웃
+                        .gesture(
+                            MagnificationGesture()
+                                .onChanged { value in
+                                    let delta = value / self.model.lastScaleValue // 이전 스케일 대비 변화량 계산
+                                    CameraManager.shared.setZoomLevel(to: delta)
+                                    self.model.lastScaleValue = value // 마지막 스케일 값을 업데이트
+                                }
+                                .onEnded { _ in
+                                    self.model.lastScaleValue = 1.0 // 제스처가 끝나면 마지막 스케일 값을 리셋
+                                }
+                        )
+                        .onTapGesture(count: 2) {
+                            model.takePicture()
                         }
+                        .onAppear {
+                            DispatchQueue.global(qos: .userInitiated).async {
+                                cameraManager.session.startRunning()
+                            }
+                        }
+                }else {
+                    VStack {
+                        Spacer()
+                        Text("Camera cannot be used during a call.")
+//                                        .multilineTextAlignment(.center)
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundStyle(.white)
+                        Spacer()
                     }
+                }
             }
             
             // 하단 UI
@@ -307,6 +321,34 @@ struct ContentView: View {
             }
             .padding()
             .padding(.bottom, 30)
+        }
+        .onAppear {
+            callDetectionManager.startCallDetection()
+        }
+        .onDisappear {
+            callDetectionManager.stopCallDetection()
+        }
+        .onChange(of: scenePhase) { newPhase in
+            switch newPhase {
+            case .active:
+                cameraManager.configure()
+                callDetectionManager.startCallDetection()
+                print("App became active")
+            case .inactive:
+                cameraManager.session.stopRunning()
+                callDetectionManager.stopCallDetection()
+                model.frame = nil
+            case .background:
+                print("App is in background")
+            @unknown default:
+                print("Unknown scene phase")
+            }
+        }
+        .onChange(of: callDetectionManager.isUserOnCall) { newStatus in
+            if newStatus == false {
+                cameraManager.session.stopRunning()
+                cameraManager.configure()
+            }
         }
     }
     

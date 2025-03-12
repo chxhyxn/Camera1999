@@ -18,6 +18,7 @@
 		B92C5D412BC0F0E400EACE60 /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C5D402BC0F0E400EACE60 /* CIColorExtension.swift */; };
 		B92C5D432BC1396700EACE60 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C5D422BC1396700EACE60 /* ImagePicker.swift */; };
 		B92C5D452BC13AC500EACE60 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C5D442BC13AC500EACE60 /* ImageView.swift */; };
+		B9871EEB2D7FB6120099850C /* CallDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9871EEA2D7FB60C0099850C /* CallDetectionManager.swift */; };
 		B99169E52BC363D00032DDC9 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99169E42BC363D00032DDC9 /* Preset.swift */; };
 		B99169EB2BC372720032DDC9 /* shutter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B99169EA2BC372720032DDC9 /* shutter.mp3 */; };
 		B99169ED2BC374B30032DDC9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99169EC2BC374B30032DDC9 /* Launch Screen.storyboard */; };
@@ -48,6 +49,7 @@
 		B92C5D402BC0F0E400EACE60 /* CIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIColorExtension.swift; sourceTree = "<group>"; };
 		B92C5D422BC1396700EACE60 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B92C5D442BC13AC500EACE60 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		B9871EEA2D7FB60C0099850C /* CallDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetectionManager.swift; sourceTree = "<group>"; };
 		B99169E42BC363D00032DDC9 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
 		B99169EA2BC372720032DDC9 /* shutter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shutter.mp3; sourceTree = "<group>"; };
 		B99169EC2BC374B30032DDC9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		B92C5D2D2BC0CF2D00EACE60 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B9871EEA2D7FB60C0099850C /* CallDetectionManager.swift */,
 				B9BF61362BBFF84E0079F2F2 /* CameraManager.swift */,
 				B9BF613A2BBFFFFC0079F2F2 /* FrameManager.swift */,
 				B92C5D382BC0E45F00EACE60 /* FilterManager.swift */,
@@ -263,6 +266,7 @@
 				B90BAD7A2BC2E229007925BD /* ControlView.swift in Sources */,
 				B9BF61372BBFF84E0079F2F2 /* CameraManager.swift in Sources */,
 				B92C5D412BC0F0E400EACE60 /* CIColorExtension.swift in Sources */,
+				B9871EEB2D7FB6120099850C /* CallDetectionManager.swift in Sources */,
 				B92C5D282BC0CEE500EACE60 /* ColorExtension.swift in Sources */,
 				B92C5D392BC0E45F00EACE60 /* FilterManager.swift in Sources */,
 				B99169E52BC363D00032DDC9 /* Preset.swift in Sources */,

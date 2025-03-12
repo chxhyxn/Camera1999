@@ -180,7 +180,7 @@ class CameraManager: ObservableObject {
         status = .configured
     }
     
-    private func configure() {
+    func configure() {
         checkPermissions()
         
         sessionQueue.async {
